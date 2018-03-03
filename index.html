@@ -5,23 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <h1 class=jumbotron>Cat Trivia - See how much you know!!</h1>
     <p id="display-question"></p>
-    <div>
-        <input type="radio" id="display-answer1" name="ans" value="answers">
-        <label for="display-answer1"></label>
-        <br>
-        <input type="radio" id="display-answer2" name="ans" value="answers">
-        <label for="display-answer2"></label>
-        <br>
-        <input type="radio" id="display-answer3" name="ans" value="answers">
-        <label for="display-answer3"></label>
-        <br>
-        <input type="radio" id="display-answer4" name="ans" value="answers">
-        <label for="display-answer4"></label>
+    <div id="display-button" id="display-answer1">
+        <ul>
+            <button type="button" class="btn btn-outline-info" data-value = "1">1</button>
+            <li id="display-answer1"></li>
+            <button type="button" class="btn btn-outline-info" data-value = "2">2</button>
+            <li id="display-answer2"></li>
+            <button type="button" class="btn btn-outline-info" data-value = "3">3</button>
+            <li id="display-answer3"></li>
+            <button type="button" class="btn btn-outline-info" data-value = "4">4</button>
+            <li id="display-answer4"></li>
+        </ul>
+        <img src="assets/images/cat-icecream.webp" alt="funny cat pic">
+        <!-- <button type="button"></button>
+        <button type="button"></button>
+        <button type="button"></button>
+        <button type="button"></button> -->
     </div>
+    <div id="correctAnswers">
+    </div>
+    
     <!-- <ul>
         <li id="display-answers"></li>
         <li id="display-answers"></li>

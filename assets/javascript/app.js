@@ -12,59 +12,71 @@ var answers = [["left-pawed", "female", "friendly", "finicky"],
 ["Balding Disorder", "Minoxidil", "Alopecia", "Lymphadenopathy"],
 ["Felineophobia", "Get-it-away-ophobia", "Ailurophobia",
 "There isn't one because it's not a recognized fear."]];
+var correctAns = [2,1,4,3,3,3];
 
 var countQ = 0;
 var countA = 0;
-function Q1() {
-    $("#display-question").text(questions[countQ]);
-    // for (var i=0; i<answers[i].length; i++) {
-        $("#display-answer1").text(answers[countQ][countA]);
-        console.log (answers[countQ][countA]);
-        console.log (answers[countQ][countA+1]);
-        $("#display-answer2").text(answers[countQ][countA+1]);
-        $("#display-answer3").text(answers[countQ][countA+2]);
-        $("#display-answer4").text(answers[countQ][countA+3]);
-    // });
-}
-Q1();
+var winCount = 0;
+var checkAns;
+// function Q1() {
+//     $("#display-question").text(questions[countQ]);
+//     for (var i=0; i<answers[i].length; i++) {
+//         console.log (answers[i].length);
+//         var str = answers[countQ][i];
+//         // $("#display-button").html('<button type="button"></button>');
+//         $("#display-answer").text(answers[countQ][i]);
+//         // $("#display-button").html('<button type="button"></button>');
+//         console.log (answers[countQ][i]);
+//      };
+// }
+// Q1();
+
 function otherQs() {
     countQ=0;
     countA=0;
-    // window.test = setInterval(function() {
-        for (var i=1; i<questions.length; i++) {
-            countQ++;
-            console.log(questions.length);
-            console.log(countQ);
-            console.log(countA);
-            var timer = setTimeout(function() {
-            $("#display-question").text(questions[i]);
-            console.log(questions[i]);
-            // for (var i=1; i<answers[i].length; i++) {
-            $("#display-answer1").text(answers[i][countA]);
-            console.log(answers[i][countA]);
-            $("#display-answer2").text(answers[i][countA+1]);
-            console.log(answers[i][countA+1]);
-            $("#display-answer3").text(answers[i][countA+2]);
-            console.log(answers[i][countA+2]);
-            $("#display-answer4").text(answers[i][countA+3]);
-            console.log(answers[i][countA+3]);
-            }, 4000);
-            // if (countQ > 6) clearTimeout(timer);
-            // }, 4000);
-        }
+    // window.test = setTimeout(function() {
+
+        for (var i=0; i<questions.length; i++) {
+            console.log("here");
+            (function (i) {
+                setTimeout (function () {
+                    console.log("here");
+                    countQ++;
+                    console.log(questions.length);
+                    console.log("countQ: " + countQ);
+                    console.log("countA: " + countA);
+                    $("#display-question").text(questions[i]);
+                    console.log("questions[i]: " + questions[i]);
+                    $("#display-answer1").text(answers[i][countA]);
+                    console.log(answers[i][countA]);
+                    $("#display-answer2").text(answers[i][countA+1]);
+                    console.log(answers[i][countA+1]);
+                    $("#display-answer3").text(answers[i][countA+2]);
+                    console.log(answers[i][countA+2]);
+                    $("#display-answer4").text(answers[i][countA+3]);
+                    console.log(answers[i][countA+3]);
+                    checkAns = $("button").data("value");
+                    console.log ("checkAns in main: " + checkAns)
+                    $("button").on("click", correctGuess(checkAns,i));
+                    
+                }, 4000*i);
+            })(i);
+            // checkAns = $("value").on("click", correctGuess());
+};
 }
 otherQs();
-// function otherAs() {
-//     count=0;
-//     window.test = setInterval(function() {
-//         answers.forEach (function() {
-//             count++;
-//             console.log (answers[count][0]);
-//             console.log (answers[count][1]);
-//             console.log (answers[count][2]);
-//             console.log (answers[count][3]);
-//             // console.log (answers[count][i]);
-//             if (count > 6) clearInterval(window.test);
-//             })}, 4000);
-// }
-// otherAs();
+
+function correctGuess(num,index) {
+    console.log ("correctAns before if: " + correctAns[index]);
+    console.log ("checkAns before if: " + num)
+        if (correctAns[index]==num) {
+            console.log("correctAns: " + correctAns[index]);
+            console.log("checkAns: " + num); 
+           winCount++;
+           $('correctAnswers').text("The number of correct answers is: " + winCount); 
+        }
+    // if (i===1 && checkAns===1) {
+    //     console.log ("Correct answer on question 2");
+    // } else if (i===2 && checkAns===4) {
+    //     console.lot ("Correct answer on question 3");
+}
