@@ -49,5 +49,15 @@ img {
     height: 300px;
     position: absolute;
     top: 200px;
-    left: 500px;
+    left: 600px;
+}
+
+#correctAnswers {
+    clear: both;
+    display: block;
+}
+
+#incorrectAnswers {
+    clear: both;
+    display: block;
 }
