@@ -1,5 +1,5 @@
 # TriviaGame
-Trivia game about cats
+Trivia game about cats.
 General Information:
 Developer - Karen Brant
 Languages/Frameworks - HTML, CSS, Javascript, JQuery, Bootstrap
