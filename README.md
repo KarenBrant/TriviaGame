@@ -1,8 +1,8 @@
 # TriviaGame
 Trivia game about cats.
 General Information:
-Developer - Karen Brant
-Languages/Frameworks - HTML, CSS, Javascript, JQuery, Bootstrap
+Developer - Karen Brant,
+Languages/Frameworks - HTML, CSS, Javascript, JQuery, Bootstrap.
 Getting started:
 The game "Cat Trivia" allows a user to choose an answer to six different questions about cats.  The questions are timed, so
 the player gets 15 seconds per question.  The results of correct versus incorrect answers will be displayed after all of the 
