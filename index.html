@@ -9,8 +9,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <h1 class=jumbotron>Cat Trivia - See how much you know!!</h1>
+    <h1 class="jumbotron text-center">Cat Trivia - See how much you know!!</h1>
+    <!-- Directions -->
+    <h6 class = "border border-info">Welcome to cat trivia.  You have 15 seconds to complete each question and
+        if the question is blank when the 15 seconds are up, it will be counted as
+        an incorrect answer.  If no answers are clicked throughout the game, then nothing will happen.  The game
+        will then move on to the next question.  Your score will be displayed at the end and you will be prompted 
+        to enter a y to play again or a n to stop play.
+    </h6>
+    <!-- Questions will be displayed here -->
     <p id="display-question"></p>
+    <!-- Answers will be displayed here -->
     <div id="display-button" id="display-answer1">
         <ul>
             <button type="button" class="btn btn-outline-info" data-value = "1">1</button>
@@ -22,25 +31,17 @@
             <button type="button" class="btn btn-outline-info" data-value = "4">4</button>
             <li id="display-answer4"></li>
         </ul>
-        <img src="assets/images/cat-icecream.webp" alt="funny cat pic">
-        <!-- <button type="button"></button>
-        <button type="button"></button>
-        <button type="button"></button>
-        <button type="button"></button> -->
+        <div class="shadow"><img class ="logo" src="assets/images/cat-icecream.webp" alt="funny cat pic"></div>
     </div>
+    <!-- Displays for correct/incorrect answers and totals -->
     <div>
         <p id="correctAnswers"></p>
         <p id="incorrectAnswers"></p>
-        <!-- <p id="playTimes"></pid></p> -->
+        <p id="totals"></p>
         <p id="wins"></p>
         <p id="losses"></p>
     </div>
-    <!-- <ul>
-        <li id="display-answers"></li>
-        <li id="display-answers"></li>
-        <li id="display-answers"></li>
-        <li id="display-answers"></li>
-    </ul> -->
+    
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
 <script src="assets/javascript/app.js"></script> 
 </body>

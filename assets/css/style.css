@@ -1,6 +1,18 @@
 .jumbotron {
-    background-color: lightskyblue;
+    background-color: #17a2b8;
 }
+
+h6 {
+    width: 65%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.border {
+    border-color: #17a2b8;
+    border: 10px solid;
+}
+
 p {
     margin-left: 20px;
 }
@@ -22,42 +34,42 @@ li {
     margin-left: 20px;
     margin-bottom: 15px;
     margin-top: 5px;
-}
-
-#display-answer1 {
     float: left;
-    /* display: block; */
-
 }
 
-#display-answer2 {
-    float: left;
-    /* display: block; */
-}
-
-#display-answer3 {
-    float: left;
-    /* display: block; */
-}
-
-#display-answer4 {
-    float: left;
-    /* display: block; */
-}
-
-img {
-    height: 300px;
+div.shadow {
     position: absolute;
-    top: 200px;
-    left: 600px;
+    max-width: 70%;
+    max-height: 80%;
+    top: 50%;
+    left: 80%;
+    overflow: visible;
+}
+
+img.logo {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: -60%;
+    margin-left: -20%;
 }
 
 #correctAnswers {
     clear: both;
     display: block;
+    color: red;
 }
 
 #incorrectAnswers {
     clear: both;
     display: block;
+    color: red;
+}
+
+#totals {
+    color: #17a2b8;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 0px;
 }
